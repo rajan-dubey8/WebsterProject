@@ -1,0 +1,421 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#header {
+    background-color: black;
+    height: 15vh;
+    margin: 0vh;
+
+    text-align: center;
+
+}
+
+#blogme {
+    padding-left: 6vh;
+    font-family: 'Noto Serif Old Uyghur', serif;
+    font-family: 'Pacifico', cursive;
+    font-size: 6vh;
+    letter-spacing: 1vh;
+    color: #ecebec;
+}
+
+#blogme:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+.outerbox1 {
+    background-color: hsla(288, 74%, 1%, 0.85);
+
+    display: flexbox;
+    flex-direction: row;
+}
+
+.navbar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+}
+
+#nav {
+    margin-left: 2vw;
+    font-size: 1.2rem;
+    display: inline-block;
+    color: #ecebec;
+    text-decoration: none;
+
+}
+
+#nav:hover {
+    color: rgb(168, 168, 57);
+    cursor: pointer;
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img2 {
+    background: url(p1.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.greet {
+    margin: 20px;
+}
+@keyframes greetingAn{
+    0%{ 
+        opacity: 0;
+         color: rgb(207, 207, 181);
+    }25%{
+        opacity: 0.25;
+        color: #f8e4d1;
+
+    }50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }100%{
+        opacity: 1;
+    }
+}
+#greeting {
+    animation: greetingAn 2.5s ease-in 0.75s 1 forwards;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: 'Playpen Sans', cursive;
+    color: #ecebec;
+}
+
+
+#blogmeis {
+    text-align: center;
+    color: #ecebec;
+    font-size: 1.7rem;
+    padding: 0.5vw 1.5vw 0 1.5vw;
+
+}
+
+#yourgo {
+    font-size: 3vh;
+    color: #ecebec;
+    padding-left: 10vh;
+
+}
+
+.portfolio {
+    display: grid;
+    background-color:  hsla(288, 74%, 1%, 0.85);
+    grid-template-areas: "nw rv hp"
+        " nw wl hl"
+        "cm wl tb";
+
+
+}
+.portfolioHvr:hover{
+    opacity: 60%;
+}
+
+.news {
+    grid-area: nw;
+    min-height: 30vh;
+}
+
+
+.cm {
+    grid-area: cm;
+}
+
+.hp {
+    grid-area: hp;
+    min-height: 30vh;
+}
+
+.rv {
+    grid-area: rv;
+    z-index: 0;
+}
+
+.wl {
+    grid-area: wl;
+    min-height: 30vh;
+}
+
+.health {
+    grid-area: hl;
+}
+
+.tablet {
+    grid-area: tb;
+    min-height: 30vh;
+}
+
+
+.connect {
+    background-color: hsla(288, 74%, 1%, 0.85)
+}
+
+.h1 {
+    position: static;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 600;
+    padding: 25px 0 10px 0;
+    font-family: 'Playpen Sans', cursive;
+    color: #e2d6ca;
+
+}
+
+.blogmeis {
+    text-align: center;
+    color: #ecebec;
+    font-size: 1.3vw;
+    
+    padding: 20px 120px 10px 120px;
+
+}
+
+.blogTitle {
+    text-align: center;
+    align-items: center;
+    padding: 20% 10% 5% 10%;
+    color: rgb(235, 250, 212);
+    font-family: 'Playpen Sans', cursive;
+    font-size: 1.5vw;
+
+}
+
+.text{
+
+    text-align: center;
+    align-items: center;
+    padding: 5% 10% 10% 10%;
+    color: rgb(210, 242, 246);
+    font-size: 1.5vw;
+
+}
+.txt{
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out 0.2s;
+}
+.txt:hover{
+    opacity: 1;
+   
+}
+.video_para{
+    opacity: 0;
+   
+}
+.video_para:hover{
+    opacity: 1;
+}
+.btn {
+    display: flex;
+    float: row;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.button {
+
+    background-color: rgb(245, 152, 66);
+    border: rgb(65, 143, 215);
+    border-radius: 20px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: wheat;
+    background-color: black;
+    cursor: pointer;
+}
+
+#footer {
+    background-color: black;
+    display: grid;
+    grid-template-areas: "nm cc  nn nn nn";
+    margin: 0vh;
+    color: #ecebec;
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.nm {
+    grid-area: nm;
+}
+
+.cn {
+    grid-area: cc;
+}
+
+.bold {
+    font-family: 'Noto Serif Old Uyghur', serif;
+    color: rgb(190, 218, 243);
+}
+
+.mail:hover {
+    cursor: pointer;
+    color: rgb(243, 176, 176);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 10px;
+    }
+
+    .row2 {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    #greeting {
+
+        font-size: 2rem;
+        font-weight: 500;
+        font-family: 'Playpen Sans', cursive;
+        color: #ecebec;
+    }
+
+    #blogmeis {
+        text-align: center;
+        color: #ecebec;
+        font-size: 1rem;
+
+    }
+
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+
+
+        /* grid-template-areas: "nw rv"
+                            " nw wl"
+                             "cm wl"; */
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#chat-interface {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#chat-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#chat-body {
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#chat-input {
+    width: calc(100% - 48px);
+    padding: 8px;
+    border: none;
+    border-top: 1px solid #ccc;
+    float: left;
+    margin-right: 8px;
+}
+
+#send-button {
+    width: 48px;
+    padding: 8px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+}

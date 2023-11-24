@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Modern Login Page | AsmrProg</title>
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <a id="blogme"><img src="../../code/logoblack.png" alt=""
+                    style="margin-top: 1.5vh; background-size: cover; height: 90%;"></a>
+        </div>
+    </header>
+
+   
+  
+            <div class="container" id="container">
+                <div class="form-container sign-up" id="signup">
+                    <form method="post" action="/signup">
+                        <h1>Create Account</h1>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your email for registeration</span>
+                        <input type="text" placeholder="Name" name="name" required>
+                        <input type="number" minlength="10" maxlength="10"  placeholder="Mobile Number" name="mobileNo" required>
+                        <input type="email" placeholder="Email" name="email" required>
+                        <input type="password" placeholder="Password" name="password" required>
+                        <button value="signup">Sign Up</button>
+                       
+                        <div style="margin-top: 0.4vw;">! <%=err.message%> !</div>
+                    </form>
+                </div>
+                <div class="form-container sign-in" id="signin">
+                    <form method="post" action="/signin">
+                        <h1>Sign In</h1>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your email password</span>
+                        <input type="email" placeholder="Email" name="email" required>
+                        <input type="password" placeholder="Password" name="password" required>
+                        <a href="http://localhost:8000/forget">Forget Your Password?</a>
+                        <button value="signin">Sign In</button>
+                        <a value="signin" href="signin" >Login As Guest</a> 
+                        <button id="newbtn">Register</button>
+                        <div style="margin-top: 0.4vw;">! <%=err%> !</div>
+                    </form>
+                  
+                   
+                </div>
+                <div class="toggle-container" id="toggle">
+                    <div class="toggle">
+                        <div class="toggle-panel toggle-left">
+                            <h1>Welcome Back!</h1>
+                            <p>Enter your personal details to use all of site features</p>
+                            <button class="hidden" id="login">Sign In</button>
+                        </div>
+                        <div class="toggle-panel toggle-right">
+                            <h1>Welcome-back! Blogger</h1>
+                            <p>Register with your personal details to use all of site features</p>
+                            <button class="hidden" id="register">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+            <script>const container = document.getElementById('container');
+                const registerBtn = document.getElementById('register');
+                const loginBtn = document.getElementById('login');
+
+                registerBtn.addEventListener('click', () => {
+                    container.classList.add("active");
+                });
+
+                loginBtn.addEventListener('click', () => {
+                    container.classList.remove("active");
+                });
+                const regbtn = document.getElementById('newbtn');
+                const toggle = document.getElementById('toggle');
+                const signin = document.getElementById('signin');
+                const signup = document.getElementById('signup');
+                if (regbtn.style.display == 'block') {
+                    signup.classList.add("hide");
+                    signin.style.width = "100%";
+                    toggle.style.display = 'none';
+
+                }
+                regbtn.addEventListener('click', () => {
+
+                    signin.classList.add("hide");
+                    signup.style.display = "block";
+                });
+
+            </script>
+</body>
+
+</html>
