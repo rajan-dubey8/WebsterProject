@@ -12,7 +12,7 @@ dotenv.config({ path: "./db/config.env" });
 const CONN_STR = process.env.CONN_STR;
 const mongoDBSession = require("connect-mongodb-session")(session);
 require("./db/conn");
-const db =CONN_STR;   // "or use the connection url diirectly saved in .env";
+const db =CONN_STR;   // "or use the connection url diirectly ;
 const local = "mongodb://127.0.0.1:27017";
 const store = new mongoDBSession({
   uri: local,
