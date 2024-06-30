@@ -6,11 +6,13 @@ const bcrypt = require("bcryptjs");
 const nodemailer = require("nodemailer");
 const randomstring = require("randomstring");
 const session = require("express-session");
+const dotenv = require("dotenv");
+dotenv.config({ path: "./db/config.env" });
 
+const CONN_STR = process.env.CONN_STR;
 const mongoDBSession = require("connect-mongodb-session")(session);
 require("./db/conn");
-const db =
-  "mongodb+srv://user_rd:rdrajan5751@cluster0.sqyghbz.mongodb.net/MySpace?retryWrites=true&w=majority";
+const db =CONN_STR;   // "or use the connection url diirectly saved in .env";
 const local = "mongodb://127.0.0.1:27017";
 const store = new mongoDBSession({
   uri: local,
@@ -96,9 +98,8 @@ const isAuth = (req, res, next) => {
     res.redirect("/login");
   }
 };
-
-const root_email = "rajandubey5751@gmail.com";
-const pass = "nhzy hewr sqcl dwlw";
+const root_email = process.env.EMAIL;
+const pass = process.env.EMAIL_PASS_CON;
 const sendResetMail = async (name, email, token) => {
   // try {
   const transporter = nodemailer.createTransport({
@@ -108,8 +109,8 @@ const sendResetMail = async (name, email, token) => {
     secure: false,
     requireTLS: true,
     auth: {
-      user: "rajandubey5751@gmail.com",
-      pass: "nhzy hewr sqcl dwlw",
+      user: root_email,
+      pass: pass,
     },
   });
   const mailOptions = {
